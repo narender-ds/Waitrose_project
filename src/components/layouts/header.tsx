@@ -48,14 +48,14 @@ const Header = (props: DataOfProps) => {
               <img className="h-10" src={c_headerMain.headerLogo.url} />
             </div>
             <div className="">
-              <button className="border border-[#6A8B2B] py-2 px-4 mr-3">
+              <a href="#" className="border border-[#6A8B2B] py-2 px-4 mr-3">
                 {" "}
                 {c_bookASlotCta.label}
-              </button>
-              <button className="border border-[#6A8B2B] py-2 px-4">
+              </a>
+              <a href="#" className="border border-[#6A8B2B] py-2 px-4">
                 {" "}
                 {c_myTrolleyCta.label}
-              </button>
+              </a>
             </div>
           </div>
           <div className="py-[6px] flex items-center">

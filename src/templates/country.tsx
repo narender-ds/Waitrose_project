@@ -5,7 +5,7 @@ import * as React from "react";
 // import BreadCrumbs from "../components/BreadCrumbs";
 import "../index.css";
 // import bannerImage from "../images/app-bg.png";
-// import favicon from "../images/favicon.png";
+import {favicon} from "../../sites-global/global";
 import { JsonLd } from "react-schemaorg";
 import {
   Template,
@@ -85,7 +85,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     ? document.c_metaDescription
     : "Visit your " +
       document.name +
-      "Get the real Papa John's taste now – order fresh cooked pizza, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better pizza";
+      "Get the real Waitrose's taste now – order fresh cooked pizza, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better pizza";
   let metaTitle = document.c_metaTitle
     ? document.c_metaTitle
     : "Visit " + document.name + " | Order Pizza: Delivery Or Takeaway | ";
@@ -100,7 +100,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         attributes: {
           rel: "icon",
           type: "image/x-icon",
-          // href: favicon,
+          href: favicon,
         },
       },
       {
@@ -114,7 +114,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: "Papa John's Pizza",
+          content: "Waitrose",
         },
       },
 
@@ -166,7 +166,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         attributes: {
           name: "og:image",
           content:
-            "https://www.papajohns.com.mx/en-US/images/logos/pji_arch_red_en.png",
+            "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",
         },
       },
 
@@ -191,7 +191,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         attributes: {
           name: "twitter:image",
           content:
-            "https://www.papajohns.com.mx/en-US/images/logos/pji_arch_red_en.png",
+            "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",
         },
       },
       {
@@ -276,13 +276,13 @@ const Country: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "papa john's pizza",
-          url: "https://www.papajohns.com/international/",
-          logo: "https://www.papajohns.com.mx/en-US/images/logos/pji_arch_red_en.png",
+          name: "Waitrose",
+          url: "https://www.waitrose.com/international/",
+          logo: "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "PApa John's pizza",
-            addressLocality: "Papa John's International, Inc.",
+            streetAddress: "Waitrose",
+            addressLocality: "Waitrose's International, Inc.",
             addressRegion: "Louisville",
             postalCode: "99900",
             addressCountry: "Louisville",
@@ -293,9 +293,9 @@ const Country: Template<TemplateRenderProps> = ({
             telephone: "01255 222568",
           },
           sameAs: [
-            "https://www.facebook.com/papajohnsmx",
-            "https://www.instagram.com/papajohnsmx/",
-            "https://www.twitter.com/papajohnsmx",
+            "https://www.facebook.com/waitrosemx",
+            "https://www.instagram.com/waitrosemx/",
+            "https://www.twitter.com/waitrosemx",
           ],
         }}
       />

@@ -57,7 +57,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     title: `${
       document.c_meta_title
         ? document.c_meta_title
-        : `Papa John - Find Find papajohns Here Locator Here.`
+        : `Waitrose Store - Find Find waitrose Here Locator Here.`
     }`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
@@ -121,7 +121,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_title
               ? document.c_meta_title
-              : `Papa John - Find Find papajohns Here.`
+              : `Waitrose Store - Find Find waitrose Here.`
           }`,
         },
       },
@@ -157,7 +157,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_title
               ? document.c_meta_title
-              : `Papa John Near ME .`
+              : `Waitrose Store Near ME .`
           }`,
         },
       },
@@ -173,7 +173,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Locator: Template<TemplateRenderProps> = ({ document, __meta }) => {
-  const { _site } = document;
+  const { _site,timezone,hours } = document;
 
   let templateData = { document: document, __meta: __meta };
   const endpoints = {
@@ -210,7 +210,13 @@ const Locator: Template<TemplateRenderProps> = ({ document, __meta }) => {
       >
         {" "}
         <AnalyticsScopeProvider name={""}>
-          <PageLayout global={_site}>
+          {/* <PageLayout global={_site} > */}
+          <PageLayout
+            global={_site}
+            timezone={timezone}
+                       hour={hours}
+            // name={name}
+          >
             <SearchHeadlessProvider
               experienceKey={AnswerExperienceConfig.experienceKey}
               locale={AnswerExperienceConfig.locale}

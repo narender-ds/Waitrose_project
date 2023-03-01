@@ -1,5 +1,5 @@
 export const stagingBaseurl =
-  "https://main-sleekly--intimate--llama-sbx-pgsdemo-com.sbx.preview.pagescdn.com/";
+  "https://main-agreeably--moved--oyster-sbx-pgsdemo-com.sbx.preview.pagescdn.com/";
 export const cookieText =
   " We use cookies on our website. Some are essential to enable to site to function, others are analytical and help us monitor site usage, whilst some are used for the personalisation of ads. You are free to manage this via your browser setting at any time. To learn more about how we use these cookies, please see our ";
 // export const cookiesUrl = "https://www.matalan.co.uk/corporate/cookies";
@@ -7,7 +7,7 @@ export const baseuRL =
   "https://liveapi-sandbox.yext.com/v2/accounts/me/entities/geosearch?radius=500";
 export const apikey_for_entity = "ea7ea73738da090eba9cafbc45220b0b";
 export const favicon =
-  "https://www.papajohns.com/assets/logo/logo-small.svg";
+  "https://dfjml3xf3svvu.cloudfront.net/static/version6/favicon.ico";
 export const apiKey = "b80ff9149c6b18df54d3d1cc60004462";
 export const googleApikey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
 export const regionNames = new Intl.DisplayNames(["en"], { type: "region" });

@@ -125,7 +125,7 @@ const Footer = (props: DataOfProps) => {
               })}
             </div>
                   </div>
-        
+        <div className="flex">
           <div className="socialIcondiv">
             <p className="socialIconp"> {c_socialIcon.followTitle}</p>
             <ul className="socialiconUl ">
@@ -134,7 +134,7 @@ const Footer = (props: DataOfProps) => {
                   data-cy="social-links"
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.twitter.com/papajohnsmx"
+                  href="#"
                   aria-label="Visit our Twitter page"
                 >
                   <span aria-hidden="true">
@@ -155,6 +155,7 @@ const Footer = (props: DataOfProps) => {
         <div>
         <img src={c_footerImage.url} alt="" />
         </div>
+      </div>
       </div>
    <p className="copyright">{c_copyrightTag}</p> 
       {/* </div > */}

@@ -10,6 +10,7 @@ module.exports = {
     colors: {
       'transparent': 'transparent',
       'white': '#ffffff',
+      'darksgray':"#777777",
       // 'bg-red':"#658725",
       'black': '#000000',
       'Dark-red': '#658725',
