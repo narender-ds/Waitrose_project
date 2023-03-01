@@ -11,9 +11,13 @@ function Menu(props:any){
         {props.c_matalanMenu.c_matalanMenu.map((item:any,i:Number)=>{
              return(
                 <>
+                <a className="" href="#">
+                <ul>
                 <li className="-mb-px mr-1 w-full">
-                <a className="" href="#">{item.menuList}</a>
+                {item.menuList}
                 </li>
+                </ul>
+                </a>
                 </>
              )
            })} 

@@ -236,15 +236,12 @@ const SearchLayout = (props: any): JSX.Element => {
       {/* {loader} */}
       <div className="breadcrumb">
         <div className="container-custom">
-          <ul>
-            <li>
-              <a href="#" className="home">
-                {" "}
-                Home
-              </a>
-            </li>
-            <li>{StaticData.locator_breadcrumb}</li>
-          </ul>
+          <a href="#" className="home">
+            <ul>
+              <li> Home</li>
+              <li>{StaticData.locator_breadcrumb}</li>
+            </ul>
+          </a>
         </div>
       </div>
       <div className="locator-main">
@@ -300,7 +297,6 @@ const SearchLayout = (props: any): JSX.Element => {
                 {
                   entityType: "location",
                   fieldApiName: "address.countryCode",
-
                 },
               ]}
               handleInputValue={handleInputValue}
@@ -385,7 +381,7 @@ const SearchLayout = (props: any): JSX.Element => {
                 //   container:
                 //     "result-list flex flex-col scroll-smooth  overflow-auto",
                 // }}
-                displayAllOnNoResults={false}                
+                displayAllOnNoResults={false}
                 CardComponent={LocationCard}
                 locationResults={locationResults}
                 // CardComponent={LocationCard}

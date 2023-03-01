@@ -64,9 +64,9 @@ export default function StoreHighlight(props: Data) {
                         )}
                       </div>
                       <div className="service-desc-main">
-                        <h3>{res.productName.label}</h3>
+                        <h3 className="font-lg text-black">{res.productName.label}</h3>
                         <div className="service-desc">
-                          {/* {res.itemDescription} */}
+                          {res.productDescription}
                         </div>
                         {res.productName.link && res.productName.label ? (
                           <div

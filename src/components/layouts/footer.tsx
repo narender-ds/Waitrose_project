@@ -143,15 +143,15 @@ const Footer = (props: DataOfProps) => {
           <div className="flex">
             <div className="socialIcondiv">
               <p className="socialIconp"> {c_socialIcon.followTitle}</p>
-              <ul className="socialiconUl ">
-                <li>
-                  <a
-                    data-cy="social-links"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="#"
-                    aria-label="Visit our Twitter page"
-                  >
+              <a
+                data-cy="social-links"
+                target="_blank"
+                rel="noreferrer"
+                href="#"
+                aria-label="Visit our Twitter page"
+              >
+                <ul className="socialiconUl ">
+                  <li>
                     <span aria-hidden="true">
                       {c_socialIcon.iconImage.map((item: any) => {
                         return (
@@ -165,9 +165,9 @@ const Footer = (props: DataOfProps) => {
                         );
                       })}{" "}
                     </span>
-                  </a>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </a>
               <p className="socialIconp">{c_visitOurMobileSiteTitle}</p>
             </div>
           </div>

@@ -135,6 +135,7 @@ const BreadCrumbs = (props: data) => {
         }
       }
       breadcrumbs = data?.map((crumb: any, index: any) => (
+        <ul>
         <li key={crumb.slug}>
           <Link
             href={"/" + crumb.slug + ".html"}
@@ -145,6 +146,7 @@ const BreadCrumbs = (props: data) => {
             {crumb.name}
           </Link>
         </li>
+        </ul>
       ));
 
       setList(breadcrumbs);
@@ -169,6 +171,7 @@ const BreadCrumbs = (props: data) => {
           ) : (
             <>
               {props.address && props.address.city ? (
+                
                 <li>
                   {" "}
                   <a

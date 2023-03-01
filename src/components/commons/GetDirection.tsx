@@ -68,7 +68,7 @@ const GetDirection = (props: GetDirection) => {
   return (
     <>  
     {/* <Button> */}
-     <Link
+     <a
                       data-ya-track="getdirections"
                       eventName={`getdirections`}
                       className="btn notHighligh"
@@ -78,7 +78,7 @@ const GetDirection = (props: GetDirection) => {
                       conversionDetails={conversionDetails_direction}
                     >
                         {buttonText}
-                    </Link>
+                    </a>
                     {/* </Button> */}
     {/* <a
      onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >

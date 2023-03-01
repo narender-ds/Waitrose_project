@@ -9,9 +9,11 @@ function Menu(props: any) {
         {props.c_matalanMenu && props.c_matalanMenu.c_header_links.map((item: any, i: Number) => {
           return (
             <>
+            <ul>
               <li>
               <Link props={item} />
               </li>
+              </ul>
             </>
           )
         })}
