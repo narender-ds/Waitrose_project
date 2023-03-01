@@ -13,7 +13,7 @@ export default function About(props: any) {
         <div className=" py-10">
           <div className="container mx-auto ab-secmain flex flex-wrap items-center">
             <div className="w-full md:w-1/2 px-5">
-              <img style={{ height: "80%", width: "80%" }} src={c_aboutData.aboutImage.url} />
+              <img style={{ height: "80%", width: "80%" }} src={c_aboutData.aboutImage.url} alt="" />
             </div>
             <div className="w-full md:w-1/2 about-sec px-5">
               <h3 className="font-bold text-2xl sec_heading">{c_aboutData.aboutTitle}</h3>

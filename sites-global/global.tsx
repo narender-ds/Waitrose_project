@@ -22,8 +22,8 @@ export const conversionDetailsPhone = {
   cid: "",
   cv: "2",
 };
-export const center_latitude = 30.375321;
-export const center_longitude = 69.345116;
+export const center_latitude =  51.508530;
+export const center_longitude = -0.076132;
 export function slugify(slugString:any){
   slugString.toLowerCase().toString();
   slugString = slugString.replace(/[&\/\\#^+()$~%.'":*?<>{}!@]/g, "");

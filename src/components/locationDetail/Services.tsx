@@ -31,7 +31,7 @@ export default function Storefacility(props: services) {
                   <div className="boxes-fac">
                     {/* <div className="img-item"> */}
                    
-                      <img className="bg-[#FFFFFF]" style={{width:"60%",height:"50%"}}src={item.url}></img>
+                      <img className="bg-[#FFFFFF]" style={{width:"60%",height:"50%"}}src={item.url} alt=""/>
                   
                     {/* </div> */}
                     <h5>{item.menuTitle ? item.menuTitle : Name[index]}</h5>

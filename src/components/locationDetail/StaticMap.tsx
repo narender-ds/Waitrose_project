@@ -25,7 +25,8 @@ const StaticMap = (props: Coordinates) => {
           `${longitude}` +
           "&key=AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18"
         }
-      ></img>
+        alt=""
+      />
     </>
   );
 };

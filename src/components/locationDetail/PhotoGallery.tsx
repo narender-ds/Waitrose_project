@@ -45,6 +45,7 @@ const PhotoGallery = (props: any) => {
         src={element.url} // use normal <img> attributes as props
         width={width}
         className="image"
+        alt=""
       ></img>
     </div>
   ));

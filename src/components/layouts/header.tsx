@@ -45,7 +45,7 @@ const Header = (props: DataOfProps) => {
 
           <div className="headerMainDiv py-3">
             <div className="flex justify-between items-center">
-              <img className="h-10" src={c_headerMain.headerLogo.url} />
+              <img className="h-10" src={c_headerMain.headerLogo.url} alt="" />
             </div>
             <div className="">
               <a href="#" className="border border-[#6A8B2B] py-2 px-4 mr-3">
@@ -69,9 +69,11 @@ const Header = (props: DataOfProps) => {
               {c_headerMain.headerLabels.map((item: any) => {
                 return (
                   <>
+                  <a href="#" className="anchor">
                     <ul className="flex gap-12">
-                      <a href="#" className="anchor"><li>{item.label}</li></a>
+                      <li>{item.label}</li>
                     </ul>
+                    </a>
                   </>
                 );
               })}

@@ -10,9 +10,11 @@ import { StaticData } from "../../../sites-global/staticData";
 import Holidayhours from "./Holdayhours";
 import Model from "./Model";
 import CustomMap from "./CustomMap";
+import OpenClose from "../commons/openClose";
 
 const Contact = (props: any) => {
   const {
+    timezone,
     address,
     phone,
     latitude,
@@ -50,8 +52,11 @@ const Contact = (props: any) => {
             </div>
             <div className="content-col">
             {phone}
-              
+            <div className="mr-20">
+            <OpenClose timezone={timezone} hours={hours} />
             </div>
+            </div>
+            
           </div>
         ) : (
           ""

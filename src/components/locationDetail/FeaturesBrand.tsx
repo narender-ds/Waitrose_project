@@ -7,7 +7,7 @@ export default function FeaturesBrand(props:any) {
     const photos = props.c_features_brand.map((element:any) => (   
 
         <SplideSlide>
-        <img height='100' width="100" src={element.image.url} />
+        <img height='100' width="100" src={element.image.url} alt=""/>
         </SplideSlide>    
       ));
   return (

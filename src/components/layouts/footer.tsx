@@ -6,10 +6,10 @@ type DataOfProps = {
   c_moreFromUsSection: any;
   c_aboutWaitroseSection: any;
   c_socialIcon: any;
-  c_visitOurMobileSiteTitle:any;
-  c_footerImage:any;
-  c_footerLogoText:any;
-  c_copyrightTag:any;
+  c_visitOurMobileSiteTitle: any;
+  c_footerImage: any;
+  c_footerLogoText: any;
+  c_copyrightTag: any;
 };
 const Footer = (props: DataOfProps) => {
   const {
@@ -22,18 +22,18 @@ const Footer = (props: DataOfProps) => {
     c_visitOurMobileSiteTitle,
     c_footerImage,
     c_footerLogoText,
-    c_copyrightTag
+    c_copyrightTag,
   } = props;
- 
+
   return (
     <footer
       className="inline-block w-full
     bg-[#F9F9F9]  text-white"
     >
-             <h2 className="footerLogoText">{c_footerLogoText}</h2>
+      <h2 className="footerLogoText">{c_footerLogoText}</h2>
       <div className="container px-6 pt-6 flex">
         {/* <img src={c_footerLogo.url} alt="" /> */}
- 
+
         <div className="flex">
           <div className=" grid lg:grid-cols-4 md:grid-cols-2">
             <div className="Footer-navList">
@@ -44,16 +44,20 @@ const Footer = (props: DataOfProps) => {
                 (item: any) => {
                   return (
                     <>
-                      <ul>
-                        <li>
-                          <div>
-                            <a className="anchor" href="#">
+                      <a className="anchor" href="#">
+                        <ul>
+                          <li>
+                            <div>
                               {item.navigationLinks.label}
-                              <img src={item.navigationIcon.url} className="inline"/>
-                            </a>
-                          </div>
-                        </li>
-                      </ul>
+                              <img
+                                src={item.navigationIcon.url}
+                                className="inline"
+                                alt=""
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </a>
                     </>
                   );
                 }
@@ -67,16 +71,20 @@ const Footer = (props: DataOfProps) => {
               {c_usefulInformationSection?.labelsIcons?.map((item: any) => {
                 return (
                   <>
-                    <ul>
-                      <li>
-                        <div>
-                          <a className="anchor" href="#">
+                    <a className="anchor" href="#">
+                      <ul>
+                        <li>
+                          <div>
                             {item.navigationLinks.label}
-                            <img src={item.navigationIcon.url} className="inline"/>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
+                            <img
+                              src={item.navigationIcon.url}
+                              className="inline"
+                              alt=""
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </a>
                   </>
                 );
               })}
@@ -88,16 +96,20 @@ const Footer = (props: DataOfProps) => {
               {c_moreFromUsSection?.labelsIcons?.map((item: any) => {
                 return (
                   <>
-                    <ul>
-                      <li>
-                        <div>
-                          <a className="anchor" href="#">
+                    <a className="anchor" href="#">
+                      <ul>
+                        <li>
+                          <div>
                             {item.navigationLinks.label}
-                            <img src={item.navigationIcon.url} className="inline"/>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
+                            <img
+                              src={item.navigationIcon.url}
+                              className="inline"
+                              alt=""
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </a>
                   </>
                 );
               })}
@@ -109,55 +121,62 @@ const Footer = (props: DataOfProps) => {
               {c_aboutWaitroseSection?.labelsIcons?.map((item: any) => {
                 return (
                   <>
-                    <ul>
-                      <li>
-                        <div>
-                          <a className="anchor" href="#">
+                    <a className="anchor" href="#">
+                      <ul>
+                        <li>
+                          <div>
                             {item.navigationLinks.label}
-                            <img src={item.navigationIcon.url} className="inline"/>
-                           
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
+                            <img
+                              src={item.navigationIcon.url}
+                              className="inline"
+                              alt=""
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </a>
                   </>
                 );
               })}
             </div>
-                  </div>
-        <div className="flex">
-          <div className="socialIcondiv">
-            <p className="socialIconp"> {c_socialIcon.followTitle}</p>
-            <ul className="socialiconUl ">
-              <li >
-                <a
-                  data-cy="social-links"
-                  target="_blank"
-                  rel="noreferrer"
-                  href="#"
-                  aria-label="Visit our Twitter page"
-                >
-                  <span aria-hidden="true">
-                    {c_socialIcon.iconImage.map((item: any) => {
-                      return (
-                        <>
-                          <img className="socialIcons" src={item.url} />
-                        </>
-                      );
-                    })}{" "}
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p className="socialIconp">{c_visitOurMobileSiteTitle}</p>
+          </div>
+          <div className="flex">
+            <div className="socialIcondiv">
+              <p className="socialIconp"> {c_socialIcon.followTitle}</p>
+              <ul className="socialiconUl ">
+                <li>
+                  <a
+                    data-cy="social-links"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="#"
+                    aria-label="Visit our Twitter page"
+                  >
+                    <span aria-hidden="true">
+                      {c_socialIcon.iconImage.map((item: any) => {
+                        return (
+                          <>
+                            <img
+                              className="socialIcons"
+                              src={item.url}
+                              alt=""
+                            />
+                          </>
+                        );
+                      })}{" "}
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <p className="socialIconp">{c_visitOurMobileSiteTitle}</p>
+            </div>
+          </div>
+          <div>
+            <img src={c_footerImage.url} alt="" />
           </div>
         </div>
-        <div>
-        <img src={c_footerImage.url} alt="" />
-        </div>
       </div>
-      </div>
-   <p className="copyright">{c_copyrightTag}</p> 
+      <p className="copyright">{c_copyrightTag}</p>
       {/* </div > */}
     </footer>
   );

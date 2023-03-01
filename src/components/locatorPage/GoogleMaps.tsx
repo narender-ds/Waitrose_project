@@ -502,7 +502,7 @@ function UnwrappedGoogleMaps({
             <h2>
               <a
                 className="inline-block notHighlight"
-                href={`/${result.rawData.id}`}
+                href={`/${result.rawData.id}.html`}
               >
                 {result.rawData.name}
               </a>

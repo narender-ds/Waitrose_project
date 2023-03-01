@@ -180,6 +180,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                           <img
                             style={{ width: "25PX", height: "25PX" }}
                             src={images.url}
+                            alt=""
                           />
                         );
                       })}

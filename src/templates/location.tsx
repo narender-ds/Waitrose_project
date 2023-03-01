@@ -118,8 +118,7 @@ export const config: TemplateConfig = {
       "c_faqTitle",
       "c_categoryName",
       "c_categoryItemPhoto",
-      "c_categoryTitle"
-      
+      "c_categoryTitle",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -354,7 +353,7 @@ const Location: Template<ExternalApiRenderData> = ({
     c_faqTitle,
     c_categoryName,
     c_categoryItemPhoto,
-    c_categoryTitle
+    c_categoryTitle,
   } = document;
   let templateData = { document: document, __meta: __meta };
   let hoursSchema = [];
@@ -519,10 +518,10 @@ const Location: Template<ExternalApiRenderData> = ({
       >
         {" "}
         <AnalyticsScopeProvider name={""}>
-        <PageLayout
+          <PageLayout
             global={_site}
             timezone={timezone}
-                       hour={hours}
+            hour={hours}
             name={name}
           >
             {/* <div className="container">
@@ -561,6 +560,7 @@ const Location: Template<ExternalApiRenderData> = ({
                 }
                 hours={hours}
                 title={c_standardHourTitle}
+                timezone={timezone}
                 additionalHoursText={""}
                 // c_specific_day={c_specific_day}
               ></Contact>
@@ -586,20 +586,18 @@ const Location: Template<ExternalApiRenderData> = ({
                 </div>
               )}
             </div>
-             <div className="container-custom mx-auto">
+            <div className="container-custom mx-auto">
               <About
                 c_aboutData={c_aboutData}
-              
+
                 // title={c_surveyTitle}
-                            />
+              />
             </div>
-<div className="mt-[80px] ">
+            <div className="mt-[80px] ">
               <Services
                 c_menuitems={c_categoryItemPhoto}
                 title={c_categoryTitle}
                 Name={c_categoryName}
-                
-                
               />
             </div>
             <div className="gallery-sec">
@@ -608,8 +606,8 @@ const Location: Template<ExternalApiRenderData> = ({
                 PhotoGallarytitle={c_photoGalleryTitle}
               />
             </div>
-            
-                      {/* <div className="flex w-full mt-[140px]">
+            {/* <img src={c_promotionBanner.url} alt="" /> */}
+            {/* <div className="flex w-full mt-[140px]">
                   <PhotoSlider photoGallery={_site.c_imageForBanner} />
                   <div className="flex w-1/2 flex-col">
                     <h1>About</h1>
@@ -626,10 +624,10 @@ const Location: Template<ExternalApiRenderData> = ({
             {StoreHighlight ? (
               <div className="services-sec">
                 <StoreHighlight
-                     name={name}
-                     storeHighlights={c_productHighLights}
-                     title={c_productsTitle}
-                     c_localProducts={c_localProducts}
+                  name={name}
+                  storeHighlights={c_productHighLights}
+                  title={c_productsTitle}
+                  c_localProducts={c_localProducts}
                 />
               </div>
             ) : (

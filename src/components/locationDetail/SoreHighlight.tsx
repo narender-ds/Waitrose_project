@@ -52,6 +52,7 @@ export default function StoreHighlight(props: Data) {
                             src={res.productImage.url}
                             className="w-full"
                             height="250"
+                            alt=""
                           />
                         ) : (
                           <img
