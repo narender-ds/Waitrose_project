@@ -24,16 +24,16 @@ const Header = (props: DataOfProps) => {
               {c_headerNav.headerNavigationLinks.map((itemLabels: any) => {
                 return (
                   <>
-                    <a href="">{itemLabels.label}</a>
+                    <a href="#" className="anchor">{itemLabels.label}</a>
                   </>
                 );
               })}
             </div>
             <div className="space-x-5">
-              <a href=""> {c_headerNav.headerMyAccount.label}</a>
-              <a href="">{c_headerNav.headerHelp.label}</a>
-              <a href=""> {c_headerNav.headerMyWaitrose.label}</a>
-              <a href=""> {c_headerNav.findABranch.label}</a>
+              <a href="#" className="anchor"> {c_headerNav.headerMyAccount.label}</a>
+              <a href="#" className="anchor">{c_headerNav.headerHelp.label}</a>
+              <a href="#" className="anchor"> {c_headerNav.headerMyWaitrose.label}</a>
+              <a href="#" className="anchor"> {c_headerNav.findABranch.label}</a>
               {/* <Cta buttonText="Order Pickup" href="#" style="primary-cta"></Cta>
             <button
               buttonText="Start My Order"
@@ -60,7 +60,7 @@ const Header = (props: DataOfProps) => {
           </div>
           <div className="py-[6px] flex items-center">
             <div className="btnforheader">
-              <button className="">{c_headerMain.headerBrowseCta.label}</button>
+              <a href="#" className="">{c_headerMain.headerBrowseCta.label}</a>
             </div>
             <div className="border-[black] h-10 ml-5">
               <input className="searchforHeader" placeholder="Search" />
@@ -70,7 +70,7 @@ const Header = (props: DataOfProps) => {
                 return (
                   <>
                     <ul className="flex gap-12">
-                      <li>{item.label}</li>
+                      <a href="#" className="anchor"><li>{item.label}</li></a>
                     </ul>
                   </>
                 );

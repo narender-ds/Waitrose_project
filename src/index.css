@@ -1300,7 +1300,7 @@ Nearby Sec
 
 /* footer sec */
 /* footer sec */
-a {
+.anchor {
   color: #777;
   text-decoration: inherit;
   /* display: flex; */

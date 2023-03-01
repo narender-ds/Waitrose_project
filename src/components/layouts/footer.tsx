@@ -47,7 +47,7 @@ const Footer = (props: DataOfProps) => {
                       <ul>
                         <li>
                           <div>
-                            <a className="" href="#">
+                            <a className="anchor" href="#">
                               {item.navigationLinks.label}
                               <img src={item.navigationIcon.url} className="inline"/>
                             </a>
@@ -70,7 +70,7 @@ const Footer = (props: DataOfProps) => {
                     <ul>
                       <li>
                         <div>
-                          <a className="" href="#">
+                          <a className="anchor" href="#">
                             {item.navigationLinks.label}
                             <img src={item.navigationIcon.url} className="inline"/>
                           </a>
@@ -91,7 +91,7 @@ const Footer = (props: DataOfProps) => {
                     <ul>
                       <li>
                         <div>
-                          <a className="" href="#">
+                          <a className="anchor" href="#">
                             {item.navigationLinks.label}
                             <img src={item.navigationIcon.url} className="inline"/>
                           </a>
@@ -112,7 +112,7 @@ const Footer = (props: DataOfProps) => {
                     <ul>
                       <li>
                         <div>
-                          <a className="" href="#">
+                          <a className="anchor" href="#">
                             {item.navigationLinks.label}
                             <img src={item.navigationIcon.url} className="inline"/>
                            
