@@ -119,8 +119,7 @@ const renderHours = (week: Week) => {
 
     // week.holidayHours.map((res:any)=>{
     //   if(res.date==formatDate(dayDate)){
-    //   console.log(week)
-    //   }
+      //   }
     // })
     dayDom.push(
       <DayRow
@@ -215,12 +214,11 @@ const DayRow = (props: DayRow) => {
   let Status = false;
   for (var key in myDataAccordintToMe) {
     if (key.includes(dayDate)) {
-      // console.log(dayDate)
+
       Status = true;
       holidayopenintervals.push(myDataAccordintToMe[key]);
     }
   }
-  // console.log(holidayopenintervals);
   return (
     <tr className={isToday ? "currentDay" : ""}>
       {Status ? (
@@ -297,7 +295,7 @@ const Hours = (props: Hours) => {
   let s;
   let dateNewFormat;
   const { title, hours, additionalHoursText } = props;
-  // console.log(hours, "gnfdg")
+
   function join(t: any, a: any, s: any) {
     function format(m: any) {
       let f = new Intl.DateTimeFormat("en", m);

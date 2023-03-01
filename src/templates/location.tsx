@@ -356,8 +356,6 @@ const Location: Template<ExternalApiRenderData> = ({
     c_categoryItemPhoto,
     c_categoryTitle
   } = document;
-  console.log("first===>", externalApiData);
-  // console.log("c_locationServicesData", c_locationServicesData);
   let templateData = { document: document, __meta: __meta };
   let hoursSchema = [];
   let breadcrumbScheme: any = [];

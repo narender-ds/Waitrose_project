@@ -24,7 +24,7 @@ const Footer = (props: DataOfProps) => {
     c_footerLogoText,
     c_copyrightTag
   } = props;
-  console.log("c_visitOurMobileSiteTitle.followTitle", c_visitOurMobileSiteTitle);
+ 
   return (
     <footer
       className="inline-block w-full

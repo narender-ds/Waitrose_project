@@ -11,7 +11,7 @@ type DataOfProps = {
 
 const Header = (props: DataOfProps) => {
   const { c_headerNav, c_bookASlotCta, c_headerMain, c_myTrolleyCta } = props;
-  console.log("c_bookASlotCta", c_bookASlotCta);
+
 
   return (
     <>

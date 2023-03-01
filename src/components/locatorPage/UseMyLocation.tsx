@@ -10,14 +10,11 @@ export default function UseMyLocation(){
     var Api="AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
     const geoclick=()=>{
       navigator.geolocation.getCurrentPosition(function (position) {
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
         Geocode.setApiKey(Api);
         Geocode.fromLatLng(position.coords.latitude,position.coords.longitude).then(
           (response:any) => {
             if (response.results[0]) {
-              console.log(response.results[0].formatted_address);
-              setquery(response.results[0].formatted_address)
+                       setquery(response.results[0].formatted_address)
 
           }
         },

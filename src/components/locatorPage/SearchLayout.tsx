@@ -159,7 +159,6 @@ const SearchLayout = (props: any): JSX.Element => {
     if (searchKey[0].value != "") {
       getCoordinates(Search);
     }
-    console.log(locationinbuit.length, "fisttimedispaly");
     if (locationinbuit.length == 0) {
       setDisplaymsg(true);
     } else {

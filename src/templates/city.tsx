@@ -90,7 +90,6 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
           i.slug
         }/${document.slug.toString()}.html`;
         currentUrl = url;
-        console.log('currentUrl', currentUrl)
       }
     });
     return `/${currentUrl}`;

@@ -39,13 +39,11 @@ const BannerSlide = (props: bannerData) => {
     cid: "dc6937a6-345d-4c0f-b63f-79be3c29d7bc",
     cv: "3",
   };
-  console.log("timezone", timezone);
   return (
     <>
       <div className="hero">
         {BackgroundImage?.map((item: any) => {
-          console.log("item", item);
-          return (
+               return (
             <>
               <img className="hero-img" src={item.url} alt="banner" />
             </>
@@ -54,7 +52,7 @@ const BannerSlide = (props: bannerData) => {
 
         <div className="container text-center">
           <div className="banner-text banner-dark-bg justify-center text-center">
-            <h1 className="">Welcome {name}</h1>
+            <h1 className="">{name}</h1>
             <div className="openClosestatus detail-page closeing-div">
               <OpenClose timezone={timezone} hours={hours} />
             </div>

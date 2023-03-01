@@ -269,7 +269,7 @@ const Country: Template<TemplateRenderProps> = ({
       name: document.name,
     },
   });
-  console.log(document, "country");
+
   return (
     <>
       <JsonLd<Organization>

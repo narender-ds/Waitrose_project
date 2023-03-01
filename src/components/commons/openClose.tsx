@@ -81,7 +81,7 @@ export const OpenStausFunctions = {
             nowTimeNumber < endIntervalNumber
           ) {
             currentInterval = interval;
-            // console.log(currentInterval, endIntervalNumber);
+          
             openRightNow = true;
           }
         }
@@ -110,14 +110,14 @@ export const OpenStausFunctions = {
         if (intervalsTomorrow.length > 0) {
           nextInterval = intervalsTomorrow[0];
           Day = tomorrow.getDay();
-          // console.log(tomorrow.getDay(),nextTomorrow,nextTomorrow.getDay());
+         
           nextIsTomorrow = true;
         }
       } else if (intervalsnextTommorow) {
         if (intervalsnextTommorow.length > 0) {
           nextInterval = intervalsnextTommorow[0];
           Day = nextTomorrow.getDay();
-          // console.log(nextTomorrow.getDay());
+     
           nextIsTomorrow = true;
         }
       } else if (
@@ -127,7 +127,7 @@ export const OpenStausFunctions = {
         )
       ) {
         nextTomorrow = new Date(nextTomorrow.getTime() + 86400000);
-        // console.log(nextTomorrow.getDay());
+      
         Day = nextTomorrow.getDay();
         const nextintervals = OpenStausFunctions.getIntervalOnDate(
           nextTomorrow,
@@ -144,7 +144,7 @@ export const OpenStausFunctions = {
         )
       ) {
         nextTomorrow = new Date(nextTomorrow.getTime() + 172800000);
-        // console.log(nextTomorrow.getDay());
+   
         Day = nextTomorrow.getDay();
         const nextintervals = OpenStausFunctions.getIntervalOnDate(
           nextTomorrow,
@@ -171,7 +171,7 @@ export const OpenStausFunctions = {
           nextIsTomorrow = true;
         }
       }
-      //  console.log(nextTomorrow,Day)
+
     }
 
     const week = [
@@ -187,7 +187,7 @@ export const OpenStausFunctions = {
     const statusclass = "";
 
     if (openRightNow) {
-      // console.log("openRightNow");
+  
 
       if (
         currentInterval.start === "00:00" &&
