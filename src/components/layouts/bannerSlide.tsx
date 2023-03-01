@@ -54,7 +54,7 @@ const BannerSlide = (props: bannerData) => {
 
         <div className="container text-center">
           <div className="banner-text banner-dark-bg justify-center text-center">
-            <h1 className="">Welcome to {name}</h1>
+            <h1 className="">Welcome {name}</h1>
             <div className="openClosestatus detail-page closeing-div">
               <OpenClose timezone={timezone} hours={hours} />
             </div>
