@@ -83,7 +83,7 @@ export default function Nearby(props: any) {
                     </Link>
                   </h2>
                   {location.distance ? (
-                    <div className="distance">
+                    <div className="distance text-[green]">
                       {metersToMiles(location.distance ?? 0)} <span>miles</span>
                     </div>
                   ) : (
