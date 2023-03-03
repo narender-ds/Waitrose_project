@@ -55,6 +55,7 @@ const Contact = (props: any) => {
 
         {phone ? (
           <div className="icon-row">
+             <a id="address" className=" location-phn" href={`tel:${phone}`}>
             <div className="icon">
               {" "}
               <img
@@ -66,6 +67,7 @@ const Contact = (props: any) => {
               />
             </div>
             <div className="content-col">{phone}</div>
+            </a>
           </div>
         ) : (
           ""
@@ -82,7 +84,7 @@ const Contact = (props: any) => {
             />{" "}
           </div>
           <div className=" address-text notHighlight mr-20">
-          <OpenClose timezone={timezone} hours={hours} />
+            <OpenClose timezone={timezone} hours={hours} />
           </div>
         </div>
         <ul className="">
@@ -112,21 +114,21 @@ const Contact = (props: any) => {
             <div className="hours-div mb-5 md:mb-1 flex flex-col">
               {hours.holidayHours && !hours.reopenDate ? (
                 <>
-                  <Model
+                  {/* <Model
                     name="Holiday hours"
                     holidayHours={hours.holidayHours}
                     c_specific_day={c_specific_day}
-                  />
+                  /> */}
                 </>
               ) : (
                 ""
               )}
               {hours && (
                 <Hours
-                  title={"Station Hours"}
+                  title={"Holiday hours"}
                   additionalHoursText={additionalHoursText}
                   hours={hours}
-                />
+                                />
               )}
             </div>
           </div>

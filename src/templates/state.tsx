@@ -373,6 +373,7 @@ const State: Template<TemplateRenderProps> = ({
           <PageLayout global={_site}>
             <BreadCrumbs
               name={name}
+              baseUrl={relativePrefixToRoot}
               parents={dm_directoryParents}
               address={""}
             />

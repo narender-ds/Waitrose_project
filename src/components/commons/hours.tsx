@@ -236,7 +236,7 @@ const DayRow = (props: DayRow) => {
           {Status
             ? holidayopenintervals.map((res: any) => {
                 return res.map((openint: any) => {
-                  return openint.openIntervals.map((res: any) => {
+                  return openint?.openIntervals?.map((res: any) => {
                     return (
                       <>
                         <div className="time-group">
@@ -316,6 +316,7 @@ const Hours = (props: Hours) => {
         {hours.holidayHours ? (
           <>
             <Model name="Holiday hours" holidayHours={hours.holidayHours} />
+            
           </>
         ) : (
           ""

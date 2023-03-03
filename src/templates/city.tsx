@@ -282,12 +282,15 @@ const City: Template<TemplateRenderProps> = ({
         <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
           <div className="near-location">
             <h4>
-              <a key={entity.slug} href={`${stagingBaseurl}/${url}`}>
+              <a key={entity.slug} href={`/${url}`}>
                 {entity.name}
               </a>
             </h4>
-            <div className="store-address">
+            <div className="icon-row">
+            <div className="icon">
               {svgIcons.addressPin}
+              </div>
+              <div className="content-col">
               <p>
                 {entity.address.line1 ? entity.address.line1 : ""},{" "}
                 {entity.address.line2 ? entity.address.line2 : ""}
@@ -300,11 +303,16 @@ const City: Template<TemplateRenderProps> = ({
                 <br />
               </p>
             </div>
+            </div>
             {/* {what3WordsAddressString} */}
             {entity.mainPhone ? (
               <>
-                <div className="store-phone">
+              <div className="icon-row">
+             <a id="address" className=" location-phn" href={`tel:${entity.mainPhone}`}>
+             <div className="icon">
                   {svgIcons.phoneIcon}
+                  </div>
+                  <div className="content-col">
                   <p>
                     <Link
                       href={`tel:${entity.mainPhone}`}
@@ -314,6 +322,9 @@ const City: Template<TemplateRenderProps> = ({
                       {entity.mainPhone}
                     </Link>
                   </p>
+                  </div>
+                
+                </a>
                 </div>
               </>
             ) : (
@@ -336,13 +347,13 @@ const City: Template<TemplateRenderProps> = ({
               </Link>
               <Link
                 className="view-details"
-                href={`${stagingBaseurl}/${url}`}
+                href={`/${url}`}
                 rel="noopener noreferrer"
                 eventName={`storeViewDetails`}
               >
                 {svgIcons.viewDetails} View Details
               </Link>
-            </div>
+            </div>  
           </div>
         </div>
       );
@@ -419,11 +430,17 @@ const City: Template<TemplateRenderProps> = ({
         {" "}
         <AnalyticsScopeProvider name={"header"}>
           <PageLayout global={_site}>
-            <BreadCrumbs
+            {/* <BreadCrumbs
               name={name}
               parents={dm_directoryParents}
               address={""}
-            />
+            /> */}
+            <BreadCrumbs
+            name={name}
+            parents={dm_directoryParents}
+            baseUrl={relativePrefixToRoot}
+            address={""}
+          ></BreadCrumbs>
             {/* <Banner
                   Name={document.dm_directoryParents ? document.dm_directoryParents : []}
                   TagLine={""}

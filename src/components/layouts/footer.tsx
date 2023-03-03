@@ -140,9 +140,16 @@ const Footer = (props: DataOfProps) => {
               })}
             </div>
           </div>
-          <div className="flex">
-            <div className="socialIcondiv">
-              <p className="socialIconp"> {c_socialIcon.followTitle}</p>
+          {/* <div className="flex"> */}
+          
+          <div className="h-[115px]">
+          <div>
+            <img src={c_footerImage.url} alt="" />
+          </div>
+            {/* <div className="socialIcondiv"> */}
+              <div className="socialIconp">{c_socialIcon.followTitle}</div>
+              {/* <p className="socialIconp"> </p> */}
+             <div>
               <a
                 data-cy="social-links"
                 target="_blank"
@@ -150,9 +157,10 @@ const Footer = (props: DataOfProps) => {
                 href="#"
                 aria-label="Visit our Twitter page"
               >
-                <ul className="socialiconUl ">
+                {/* <ul className="socialiconUl "> */}
+                <ul >
                   <li>
-                    <span aria-hidden="true">
+                    <span  className="flex" aria-hidden="true">
                       {c_socialIcon.iconImage.map((item: any) => {
                         return (
                           <>
@@ -168,14 +176,16 @@ const Footer = (props: DataOfProps) => {
                   </li>
                 </ul>
               </a>
-              <p className="socialIconp">{c_visitOurMobileSiteTitle}</p>
-            </div>
+              </div>
+              <div className="text-[gray]">{c_visitOurMobileSiteTitle}</div>
+            {/* </div> */}
+            {/* className="socialIconp" */}
           </div>
-          <div>
-            <img src={c_footerImage.url} alt="" />
+         
           </div>
-        </div>
       </div>
+          
+      
       <p className="copyright">{c_copyrightTag}</p>
       {/* </div > */}
     </footer>

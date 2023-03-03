@@ -338,7 +338,7 @@ body.mapView .mobile-btns .btn.mapBtn {
 /* left listing */
 .search-bx {
   /* @apply mb-0  z-20 px-4 md:px-0  pt-0 pb-6 text-gray-dark float-left  md:w-[30rem] lg:w-[42%] border-b border-[#d8d8d8]; */
-@apply  mb-2  z-20 bg-[#f9fafc] p-3 text-gray-dark float-left w-full md:w-[30rem]  lg:w-[33.375rem] 
+@apply  mb-2  z-20 bg-[gainsboro] p-3 text-gray-dark float-left w-full md:w-[30rem]  lg:w-[33.375rem] 
 
 
 }

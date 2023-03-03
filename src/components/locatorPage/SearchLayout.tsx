@@ -238,7 +238,7 @@ const SearchLayout = (props: any): JSX.Element => {
         <div className="container-custom">
           <a href="#" className="home">
             <ul>
-              <li> Home</li>
+              <li> <div dangerouslySetInnerHTML={{__html: breadcrumbhome}}/></li>
               <li>{StaticData.locator_breadcrumb}</li>
             </ul>
           </a>
@@ -298,6 +298,7 @@ const SearchLayout = (props: any): JSX.Element => {
                   entityType: "location",
                   fieldApiName: "address.countryCode",
                 },
+               
               ]}
               handleInputValue={handleInputValue}
               handleSetUserShareLocation={handleSetUserShareLocation}

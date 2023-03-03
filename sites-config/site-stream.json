@@ -22,9 +22,8 @@
     "c_myTrolleyCta",
     "c_bannerPhoto",
     "c_bannerCta",
-    "c_bannerSlogan",
-    "timezone",
-    "hours"
+    "c_bannerSlogan"
+    
   ],
   "localization": {
     "locales": ["en"],

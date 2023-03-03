@@ -10,6 +10,7 @@ import OpenClose from "../commons/openClose";
 import { StaticData } from "../../../sites-global/staticData";
 import { Link } from "@yext/pages/components";
 import Hours from "../commons/hours";
+import { Openclose } from "../../../sites-global/global";
 
 const metersToMiles = (meters: number) => {
   const miles = meters * 0.000621371;
@@ -91,7 +92,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                 </Link>
               </h2>
               {typeof result.distance != "undefined" ? (
-                <div className="distance">
+                <div className="distance ">
                   {metersToMiles(result.distance)}{" "}
                   <span>{StaticData.miles}</span>
                 </div>
@@ -106,6 +107,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             {result.rawData.mainPhone ? (
               <div className="icon-row">
                 <h6>Telephone</h6>
+                <Link id="address" className=" location-phn" href={`tel:${result.rawData.mainPhone}`}>
                 <div className="icon">
                   {" "}
                   <img
@@ -117,6 +119,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                   />
                 </div>
                 <div className="content-col">{result.rawData.mainPhone}</div>
+                </Link>
               </div>
             ) : (
               ""
@@ -140,7 +143,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                         />{" "}
                       </div>
                       <div
-                        className=" cursor-pointer flex open-now-string items-center "
+                        className=" cursor-pointer flex open-now-string items-center bg-black "
                         data-id={`main-shop-${result.rawData.id}`}
                         onClick={opentime}
                       >
@@ -169,6 +172,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                           hours={result.rawData.hours}
                           deliveryHours={result.rawData.hours}
                         ></OpenClose>
+                         <div dangerouslySetInnerHTML={{ __html: Openclose }} />
                       </div>
                     </>
                   )}

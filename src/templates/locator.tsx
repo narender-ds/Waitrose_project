@@ -44,6 +44,7 @@ import {
   AnalyticsScopeProvider,
 } from "@yext/pages/components";
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
+import BannerSlide from "../components/layouts/bannerSlide";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return `/index.html`;
@@ -173,7 +174,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 };
 
 const Locator: Template<TemplateRenderProps> = ({ document, __meta }) => {
-  const { _site,timezone,hours } = document;
+  const { _site, timezone, hours } = document;
 
   let templateData = { document: document, __meta: __meta };
   const endpoints = {
@@ -213,10 +214,13 @@ const Locator: Template<TemplateRenderProps> = ({ document, __meta }) => {
           {/* <PageLayout global={_site} > */}
           <PageLayout
             global={_site}
-            timezone={timezone}
-                       hour={hours}
             // name={name}
           >
+            <BannerSlide
+              BackgroundImage={_site.c_bannerPhoto}
+              c_cTAForBanner={_site.c_bannerCta}
+              c_bannerSlogan={_site.c_bannerSlogan}
+            />
             <SearchHeadlessProvider
               experienceKey={AnswerExperienceConfig.experienceKey}
               locale={AnswerExperienceConfig.locale}

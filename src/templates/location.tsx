@@ -502,6 +502,27 @@ const Location: Template<ExternalApiRenderData> = ({
           }.html`,
         }}
       />
+      {c_faqRelation && (
+        <>
+          <JsonLd<FAQPage>
+            item={{
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+
+              mainEntity: c_faqRelation.map((i: any) => {
+                return {
+                  "@type": "Question",
+                  name: i.question ? i.question : "question",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `<p>${i.answer ? i.answer : "answer"}</p>`,
+                  },
+                };
+              }),
+            }}
+          />
+        </>
+      )}
       <JsonLd<BreadcrumbList>
         item={{
           "@context": "https://schema.org",
@@ -518,12 +539,16 @@ const Location: Template<ExternalApiRenderData> = ({
       >
         {" "}
         <AnalyticsScopeProvider name={""}>
-          <PageLayout
-            global={_site}
-            timezone={timezone}
-            hour={hours}
-            name={name}
-          >
+          <PageLayout global={_site}>
+            <BannerSlide
+             timezone={timezone}
+             hours={hours}
+              name={name}
+             
+              BackgroundImage={c_bannerPhoto}
+              c_cTAForBanner={c_bannerCta}
+              c_bannerSlogan={c_bannerSlogan}
+            />
             {/* <div className="container">
               <BannerSlide
                 BackgroundImage={c_bannerPhoto}
@@ -538,11 +563,19 @@ const Location: Template<ExternalApiRenderData> = ({
                 </div>
               </div>
             </div> */}
-            <BreadCrumbs
+             
+            {/* <BreadCrumbs
               name={name}
               parents={dm_directoryParents}
               address={address}
-            ></BreadCrumbs>
+            ></BreadCrumbs> */}
+            <BreadCrumbs
+            name={name}
+            parents={dm_directoryParents}
+            baseUrl={relativePrefixToRoot}
+            address={address}
+          ></BreadCrumbs>
+            
             <div className="location-information">
               <Contact
                 address={address}
