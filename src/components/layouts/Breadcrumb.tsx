@@ -90,6 +90,7 @@ import * as React from "react";
 //  import { livSiteUrl, stagingBaseUrl } from "../sites-global/global";
 import { svgIcons } from "../commons/svgIcon";
 import { Link } from "@yext/pages/components";
+import { conversionDetailsDirection } from "../../../sites-global/global";
 
 type data = {
   name: any;
@@ -136,16 +137,17 @@ const BreadCrumbs = (props: data) => {
       }
       breadcrumbs = data?.map((crumb: any, index: any) => (
         <ul>
-        <li key={crumb.slug}>
-          <Link
-            href={"/" + crumb.slug + ".html"}
-            rel="noopener noreferrer"
-            eventName={"BreadCrumbs" + (index + 1)}
-            style={{ color: "#777777" }}
-          >
-            {crumb.name}
-          </Link>
-        </li>
+          <li key={crumb.slug}>
+            <Link
+              href={"/" + crumb.slug + ".html"}
+              rel="noopener noreferrer"
+              eventName={"BreadCrumbs" + (index + 1)}
+              style={{ color: "#777777" }}
+              conversionDetails={conversionDetailsDirection}
+            >
+              {crumb.name}
+            </Link>
+          </li>
         </ul>
       ));
 
@@ -163,7 +165,7 @@ const BreadCrumbs = (props: data) => {
       <div className="container">
         <ul>
           <li>
-            <a href="/">{svgIcons.homeIcon}</a>
+            <Link href="/">{svgIcons.homeIcon}</Link>
           </li>
 
           {list ? (
@@ -171,15 +173,14 @@ const BreadCrumbs = (props: data) => {
           ) : (
             <>
               {props.address && props.address.city ? (
-                
                 <li>
                   {" "}
-                  <a
+                  <Link
                     href={props.address.city + ".html"}
                     style={{ color: "#777777" }}
                   >
                     {props.address.city ? props.address.city : ""}
-                  </a>
+                  </Link>
                 </li>
               ) : (
                 <></>

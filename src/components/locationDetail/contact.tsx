@@ -2,8 +2,9 @@ import * as React from "react";
 import Cta from "../commons/cta";
 import Hours from "../commons/hours";
 import woodtexture from "../../images/wood-texture.jpg";
-import mapimage from "../../images/map.svg";
+import mapimage from "../../images/red-map.svg";
 import Phonesvg from "../../images/phone.svg";
+import timesvg from "../../images/watch-icn.svg";
 import Address from "../commons/Address";
 import GetDirection from "../commons/GetDirection";
 import { StaticData } from "../../../sites-global/staticData";
@@ -24,17 +25,25 @@ const Contact = (props: any) => {
     additionalHoursText,
     yextDisplayCoordinate,
     c_storeInfoHeading,
-    c_getDirectionsCTAText
+    c_getDirectionsCTAText,
   } = props;
   return (
     <>
       <div className="address-main-sec">
-        <h4 className="box-title">{c_storeInfoHeading?c_storeInfoHeading:"Store Details"}</h4>
+        <h4 className="box-title">
+          {c_storeInfoHeading ? c_storeInfoHeading : "Store Details"}
+        </h4>
 
         <div className="icon-row content-col">
           <div className="icon">
             {" "}
-            <img className=" " src={mapimage} width="20" height="20" alt="mapimage" />
+            <img
+              className=" "
+              src={mapimage}
+              width="20"
+              height="20"
+              alt="mapimage"
+            />
           </div>
           <div className="  address-text notHighlight">
             {address.line1}
@@ -48,24 +57,42 @@ const Contact = (props: any) => {
           <div className="icon-row">
             <div className="icon">
               {" "}
-              <img className=" " src={Phonesvg} width="22" height="22" alt="phonesvg" />
+              <img
+                className=" "
+                src={Phonesvg}
+                width="22"
+                height="22"
+                alt="phonesvg"
+              />
             </div>
-            <div className="content-col">
-            {phone}
-            <div className="mr-20">
-            <OpenClose timezone={timezone} hours={hours} />
-            </div>
-            </div>
-            
+            <div className="content-col">{phone}</div>
           </div>
         ) : (
           ""
         )}
-
+        <div className="icon-row">
+          <div className="icon">
+            {" "}
+            <img
+              className=" "
+              src={timesvg}
+              width="20"
+              height="20"
+              alt=""
+            />{" "}
+          </div>
+          <div className=" address-text notHighlight mr-20">
+          <OpenClose timezone={timezone} hours={hours} />
+          </div>
+        </div>
         <ul className="">
           <li className="button-bx direction-button">
             <GetDirection
-              buttonText={c_getDirectionsCTAText?c_getDirectionsCTAText:StaticData.getDirection}
+              buttonText={
+                c_getDirectionsCTAText
+                  ? c_getDirectionsCTAText
+                  : StaticData.getDirection
+              }
               address={address}
               latitude={latitude}
               longitude={longitude}
@@ -76,13 +103,12 @@ const Contact = (props: any) => {
         <div className="map-sec">
           <CustomMap prop={yextDisplayCoordinate} />
         </div>
-
       </div>
 
       {hours && typeof hours.monday != "undefined" ? (
         <div className="hours">
           <div className="hours-sec">
-          <h4 className="box-title">{props.title}</h4>
+            <h4 className="box-title">{props.title}</h4>
             <div className="hours-div mb-5 md:mb-1 flex flex-col">
               {hours.holidayHours && !hours.reopenDate ? (
                 <>

@@ -593,7 +593,7 @@ table.day-hrs .time-b {
 }
 
 .location-name-miles .distance {
-  @apply sm:absolute sm:-top-0.5 right-0 text-base md:text-lg mt-1 sm:mt-0;
+  @apply sm:absolute sm:-top-0.5 right-0 text-base text-[green] md:text-lg mt-1 sm:mt-0;
 }
 .icon-row a {
   @apply hover:underline;
@@ -643,7 +643,7 @@ table.day-hrs .time-b {
   @apply w-2/3;
 }
 .gm-ui-hover-effect {
-  @apply !top-2  !right-4;
+  @apply !top-[-0.5]  !right-0;
 }
 .gm-ui-hover-effect span {
   @apply !w-6 !h-6;

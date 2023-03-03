@@ -94,7 +94,9 @@ export default function Nearby(props: any) {
                 <div className="icon-row content-col">
                   <Address address={location.data.address} />
                 </div>
+                
                 <div className="icon-row closeing-div">
+                  
                   {location.data.hours ? (
                     <div
                       className="flex open-now-string items-center "

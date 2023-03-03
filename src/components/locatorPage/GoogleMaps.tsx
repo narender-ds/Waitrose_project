@@ -27,6 +27,7 @@ import GetDirection from "../commons/GetDirection";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import Address from "../commons/Address";
 import Phonesvg from "../../images/phone.svg";
+import redmapimage from "../../images/red-map.svg";
 import { ResultsCount } from "@yext/search-ui-react";
 import OpenClose from "../commons/openClose";
 import $ from "jquery";
@@ -496,9 +497,18 @@ function UnwrappedGoogleMaps({
       <>
         {" "}
         <div className="flex w-full flex-col max-w-[24rem] pl-4  md:w-[22.5rem] font-main-font text-xs sm:text-sm lg:text-base">
-          <div className="location-name-miles">
-            {/* <div className="icon"> <img className=" " src={mapimage} width="20" height="20"
-        alt="" /></div> */}
+          <div className="location-name-miles icon-row">
+            <div className="icon text-black relative">
+              {" "}
+              <img
+                className=" "
+                src={redmapimage}
+                width="20"
+                height="20"
+                alt={""}
+              />
+              {/* <span className="map-count"></span> */}
+            </div>
             <h2>
               <a
                 className="inline-block notHighlight"
@@ -507,11 +517,8 @@ function UnwrappedGoogleMaps({
                 {result.rawData.name}
               </a>
             </h2>
-          </div>
-          <div className="content-col info-window-content">
-            <Address address={result.rawData.address} />
             {result.distance ? (
-              <div className="distance">
+              <div className="distance text-[green]">
                 {metersToMiles(result.distance ?? 0)}{" "}
                 <span>{StaticData.miles}</span>
               </div>
@@ -519,21 +526,53 @@ function UnwrappedGoogleMaps({
               ""
             )}
           </div>
-          {/* {result.rawData.mainPhone?
-    <div className="icon-row">
-      <div className="icon"> <img className=" " src={Phonesvg} width="20" height="20" alt="" />
-      </div>
-      <div className="content-col">
-        <h6>Telephone</h6>
-        <a id="address" className="notHighlight" href={`tel:${result.rawData.mainPhone}`}>
-          {result.rawData.mainPhone}</a>
-      </div>
-    </div>:''} */}
+          <div className="icon-row content-col address-with-availablity notHighlight">
+            <Address address={result.rawData.address} />
+            </div>
+            
+          
+          {result.rawData.mainPhone ? (
+            <div className="icon-row">
+              <div className="icon">
+                {" "}
+                <img
+                  className=" "
+                  src={Phonesvg}
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </div>
+              <div className="content-col">
+                <h6>Telephone</h6>
+                <a
+                  id="address"
+                  className="notHighlight"
+                  href={`tel:${result.rawData.mainPhone}`}
+                >
+                  {result.rawData.mainPhone}
+                </a>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
 
           {result.rawData.hours && result.rawData.hours.reopenDate ? (
             ""
           ) : result.rawData.hours ? (
-            <div className="">
+            <div className="icon-row">
+              <div className="icon">
+                {" "}
+                <img
+                  className=" "
+                  src={timesvg}
+                  width="20"
+                  height="20"
+                  alt=""
+                />{" "}
+              </div>
+              <h6>Opening Hours</h6>
               <OpenClose
                 timezone={result.rawData.timezone}
                 hours={result.rawData.hours}

@@ -28,7 +28,6 @@
           const mode = 'no-cors';
           const headers = {'Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Origin': '*'};
           const allOptions = JSON.stringify({mode, headers});
-          // console.log(allOptions);	
           return fetch(apiUrl).then(res => res.json());
       }
       
